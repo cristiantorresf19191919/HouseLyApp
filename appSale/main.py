@@ -6,10 +6,13 @@ from appSale.routers import properties, users
 
 # from api.v1.endpoints.testing import hola
 app = FastAPI()
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-]
+# origins = [
+#     "http://localhost",
+#     "http://localhost:3000",
+# ]
+
+origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
